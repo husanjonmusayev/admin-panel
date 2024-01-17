@@ -82,8 +82,6 @@ btn && btn.addEventListener('click', function () {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-   let user = JSON.parse(localStorage.getItem("User"))
-   console.log(user);
    fetch("https://auth-rg69.onrender.com/api/products/all", {
       method: "GET"
    })
@@ -99,8 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       <td>${element.description}</td>
                       <td>${element.status}</td>
                       <td>${element.createdAt}</td>
-                    </th>
-                    
+                    </th>                   
          </tbody
          `
          });
